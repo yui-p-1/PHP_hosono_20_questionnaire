@@ -10,9 +10,19 @@ function h ($value) {
 ?>
 
 <table>
+<tr>
+    <th>年月日</th>
+    <th>時間</th>
+    <th>名前</th>
+    <th>メールアドレス</th>
+</tr>
+
 <?php
 // ファイルを変数に格納
 $fp = fopen("data/data.txt","r");
+
+
+
 
 while(!feof($fp)){
     $line = fgets($fp);
@@ -26,6 +36,7 @@ while(!feof($fp)){
 <td><?php print $name ?></td>
 <td><?php print $mail ?></td>
 </tr>
+
 <?php
     }
 }
