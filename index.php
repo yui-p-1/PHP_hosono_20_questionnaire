@@ -14,6 +14,8 @@
     <form method="POST" action="write.php">
         お名前: <input type="text" name="name">
         EMAIL: <input type="text" name="mail">
+        年齢：<input type="number" name="age">
+        出身地：<input type="text" name="place">
         <input type="submit" value="送信">
     </form>
 
