@@ -19,6 +19,11 @@
         <input type="submit" value="送信">
     </form>
 
+    <form method="post" enctype="multipart/form-data" action="write.php" >
+    <input type="file" name="fname">
+    <input type="submit" value="アップロード">
+    </form>
+
     <ul>
 	<li><a href="index.php">戻る</a></li>
     </ul>
