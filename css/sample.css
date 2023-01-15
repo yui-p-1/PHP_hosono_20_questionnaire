@@ -1,9 +1,22 @@
 body {
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
+position: block;
+text-align: center;
+}
+
+header {
+  /* position: fixed; ヘッダーを固定する
+  top: 0; /* 上部から配置の基準位置を決める */
+  /* left: 0; /* 左から配置の基準位置を決める */
+  /* right: 0; */ */ */
+  width: 100vm; /*ヘッダーの横幅を指定する */
+  height: auto; /* ヘッダーの高さを指定する */
+  /* padding: 10px; ヘッダーの余白を指定する(上下左右) */
+  color: #000000; /* フォントの色を指定する */
+  background-color: rgba(0, 0, 255, 0.1); /* 背景のみ半透明 */
+  margin-left: 30px;
+  margin-right: 30px;
+  text-align: center;
+}
 
 table, td, th {
   border-collapse: collapse;

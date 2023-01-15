@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="./css/sample.css">
 </head>
 
+
 <body>
-    <h1>アンケートフォーム</h1>
+    <header>
+        <h1>アンケートフォーム</h1>
+    </header>
     <form method="POST" action="write.php">
-        お名前: <input type="text" name="name">
-        EMAIL: <input type="text" name="mail">
-        年齢：<input type="number" name="age">
-        出身地：<input type="text" name="place">
+        お名前:<input type="text" name="name"><br>
+        EMAIL:<input type="text" name="mail"><br>
+        年齢:<input type="number" name="age"><br>
+        出身地:<input type="text" name="place"><br>
         <input type="submit" value="送信">
     </form>
 
@@ -25,10 +28,8 @@
     </form>
 
     <ul>
-	<li><a href="index.php">戻る</a></li>
+	<a href="index.php">戻る</a>
     </ul>
-
-    
 
 </body>
 </html>
