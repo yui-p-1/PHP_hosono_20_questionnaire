@@ -46,7 +46,7 @@ require_once(realpath(__DIR__) . "../../vendor/autoload.php");
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx as XlsxReader;
 $reader = new XlsxReader();
 
-$spreadsheet = $reader->load('data/data.xlsx'); // ファイル名を指定
+$spreadsheet = $reader->load('./data/data.xlsx'); // ファイル名を指定
 $sheet = $spreadsheet->getSheetByName('Sheet1'); // 読み込むシートを指定
 
 $strRange = $sheet->calculateWorksheetDimension(); //ワークシート内の最大領域座標（"A1:XXXnnn" XXX:最大カラム文字列, nnn:最大行）

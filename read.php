@@ -22,7 +22,7 @@ function h ($value) {
 
 <?php
 // ファイルを変数に格納
-$fp = fopen("data/data.txt","r");
+$fp = fopen("./data/data.txt","r");
 
 while(!feof($fp)){
     $line = fgets($fp);
