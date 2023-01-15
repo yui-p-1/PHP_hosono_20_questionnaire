@@ -21,6 +21,8 @@
         出身地:<input type="text" name="place"><br>
         <input type="submit" value="送信">
     </form>
+    
+    <br>
 
     <form method="post" enctype="multipart/form-data" action="write.php" >
     <input type="file" name="fname">
