@@ -1,6 +1,6 @@
 <?php
 $tempfile = $_FILES['fname']['tmp_name'];
-$filename = './' . $_FILES['fname']['name'];
+$filename = './data/' . $_FILES['fname']['name'];
  
 if (is_uploaded_file($tempfile)) {
     if ( move_uploaded_file($tempfile , $filename )) {
@@ -13,6 +13,8 @@ if (is_uploaded_file($tempfile)) {
 } 
 ?>
 
+<!-- 出典：PHPでファイルアップロードを実装する方法 -->
+<!-- https://uxmilk.jp/14317 -->
 
 <?php
 header("Content-Type: text/html; charset=UTF-8");
@@ -25,20 +27,20 @@ $reader = new XlsxReader();
 
 $spreadsheet = $reader->load('data/data.xlsx'); // ファイル名を指定
 $sheet = $spreadsheet->getSheetByName('Sheet1'); // 読み込むシートを指定
-$data = $sheet->rangeToArray('A1:D1'); // 配列で取得したい範囲を指定
-var_dump($data);
+$data = $sheet->rangeToArray('A1:D1000'); // 配列で取得したい範囲を指定
+// var_dump($data);//デバック用
 
 // 申込時間取得
 $date_x_1 = date("Y/m/d");
 $date_x_2 = date("w");
 $date_x_3 = date("H:i:s");
 
-// ファイルを読み込む
-$file = fopen("./data/data_x.txt","a");
-// ファイルに書き込む
-fwrite($file, $date_x_1." ".$date_x_2." ".$date_x_3." ".$data[0][0]." ".$data[0][1]." ".$data[0][2]." ".$data[0][3]."\n");
+// 書き込むファイルを読み込む
+$output_file = fopen("./data/data_x.txt","a");
+fwrite($output_file, $date_x_1." ".$date_x_2." ".$date_x_3." ".$data[1][0]." ".$data[1][1]." ".$data[1][2]." ".$data[1][3]."\n");
+
 // ファイルを閉じる
-fclose($file);
+fclose($output_file);
 
 ?>
 
